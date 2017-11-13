@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.collections.*?>
+<?import fxmltableview.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="759.0" prefWidth="1045.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.pers.ztf.tp.controller.MainController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="24.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="634.0" minWidth="10.0" prefWidth="535.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="561.0" minWidth="10.0" prefWidth="117.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="561.0" minWidth="10.0" prefWidth="354.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="561.0" minWidth="0.0" prefWidth="11.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="110.0" minHeight="0.0" prefHeight="44.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="315.0" minHeight="0.0" prefHeight="27.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="619.0" minHeight="10.0" prefHeight="619.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox prefHeight="81.0" prefWidth="535.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Button mnemonicParsing="false" onAction="#enterRoom" prefHeight="49.0" prefWidth="88.0" text="开始">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#pause" prefHeight="53.0" prefWidth="85.0" text="暂停">
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#restore" prefHeight="56.0" prefWidth="78.0" text="恢复">
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#stop" prefHeight="49.0" prefWidth="82.0" text="停止">
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <BorderPane prefHeight="680.0" prefWidth="530.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <top>
+            <HBox prefHeight="120.0" prefWidth="408.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="82.0" prefWidth="100.0">
+                     <children>
+                        <Text fx:id="text_2" fill="#ff0b0b" strokeType="OUTSIDE" strokeWidth="0.0" text="思考中">
+                           <VBox.margin>
+                              <Insets top="60.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Text>
+                        <Label prefHeight="40.0" prefWidth="93.0" text="哲学家1">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="image_Philosopher1" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="180.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="/main/resource/image/Philosopher1.png" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="106.0" text="哲学家0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="text_1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="思考中">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font></Text>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox prefHeight="411.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="image_Philosopher2" fitHeight="199.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/main/resource/image/Philosopher2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="image_Philosopher3" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/main/resource/image/Philosopher3.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="140.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+         </left>
+         <right>
+            <VBox prefHeight="381.0" prefWidth="170.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="image_Philosopher5" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets top="100.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="/main/resource/image/Philosopher5.png" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="哲学家4">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="text_5" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="思考中">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Text>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <HBox prefHeight="84.0" prefWidth="328.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Circle fill="#907f45" radius="164.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </HBox>
+         </center>
+         <bottom>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="82.0" prefWidth="100.0">
+                     <children>
+                        <Label prefHeight="40.0" prefWidth="93.0" text="哲学家1">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="text_3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="思考中" wrappingWidth="186.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="image_Philosopher4" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/main/resource/image/Philosopher4.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="150.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label prefHeight="34.0" prefWidth="101.0" text="哲学家3">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="text_4" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="思考中">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font></Text>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+      <TableView fx:id="tb_log" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+        <columns>
+          <TableColumn fx:id="col_log" prefWidth="434.0" text="运行日志" />
+        </columns>
+      </TableView>
+      <Label text="哲学家就餐问题" textFill="#4a3d1f" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin>
+      </Label>
+   </children>
+</GridPane>
